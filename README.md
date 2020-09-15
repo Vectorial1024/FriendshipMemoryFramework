@@ -1,2 +1,2 @@
 # FriendshipMemoryFramework
-A framework to simulate Colonists' memory of their friends.
+A framework to let Colonists remember their friends and notice missing persons.
