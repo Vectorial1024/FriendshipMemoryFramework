@@ -87,6 +87,14 @@ namespace FriendshipMemoryFramework
             }
         }
 
+        /// <summary>
+        /// The last known opinion of the subject pawn to this other pawn.
+        /// <para/>
+        /// Will update only when the subject pawn has recently interacted/seen the other pawn (dead or alive);
+        /// value persists even after the other pawn going off the radar/dying.
+        /// </summary>
+        public float LastKnownOpinion => lastKnownOpinion;
+
         public FriendshipMemory(Pawn subject)
         {
             this.subject = subject;

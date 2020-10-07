@@ -58,6 +58,17 @@ namespace FriendshipMemoryFramework
             return queriedTracker;
         }
 
+        /// <summary>
+        /// A shortcut to obtain the FriendshipMemory from subject to other. Does not ensure existence.
+        /// </summary>
+        /// <param name="subject">The subject pawn</param>
+        /// <param name="other">The other pawn</param>
+        /// <returns>GetFriendshipMemoryTrackerForSubject(subject).GetFriendshipMemoryForOther(other)</returns>
+        public FriendshipMemory GetFriendshipMemoryFromSubjectToOther(Pawn subject, Pawn other)
+        {
+            return GetFriendshipMemoryTrackerForSubject(subject)?.GetFriendshipMemoryForOther(other);
+        }
+
         public void Notify_PhysicalSightOccured(Pawn observer, Pawn observed)
         {
             //FriendshipMemoryFramework_Main.LogError(observer.Name?.ToString() + " observed " + observed.Name?.ToString());
